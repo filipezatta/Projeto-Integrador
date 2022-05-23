@@ -1,0 +1,154 @@
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+body{
+    background-color: rgb(238, 213, 176);
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: url("imgs/background.png");
+}
+
+
+
+ul{
+background-color:#f0f8ff ;
+list-style: none;
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+font-family: Arial, Helvetica, sans-serif
+}
+
+ul li{
+    float: left;
+    
+
+}
+
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(56, 48, 23);
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body {
+ width: 100%;
+ height: 100%;
+ text-align: justify;
+}
+
+
+#bodyindex{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff
+}
+#bodypagamento{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: right;
+
+
+}
+#fidelidade{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: left;
+}
+#pagar{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: left;
+
+
+}
+#bodycontato{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    width: 30%;
+    background-color:#f0f8ff;
+    line-height: 3mm;
+    
+}
+
+#bodysobre{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: right;
+    line-height-step: 10mm;
+}
+#horariosobre{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: left;
+    line-height:8mm;
+    font-size: 5mm;
+}
+
+#mapasobre{
+    padding: 0.2%;
+
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    float: left;
+    
+    
+    
+}
+
+
+footer{
+    margin: 0%;
+    padding: 0;
+    clear: both;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    background-color:#f0f8ff ;
+    color: rgb(82, 78, 78);
+    text-align: center;
+    bottom: 0%;
+
+}

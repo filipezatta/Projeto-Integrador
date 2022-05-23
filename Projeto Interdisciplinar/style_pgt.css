@@ -1,0 +1,119 @@
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    background-color: rgb(238, 213, 176);
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: url("imgs/background.png");
+}
+
+
+
+ul{
+background-color:#f0f8ff ;
+list-style: none;
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+font-family: Arial, Helvetica, sans-serif
+}
+
+ul li{
+    float: left;
+    
+
+}
+
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(56, 48, 23);
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+ width: 100%;
+ height: 100%;
+ text-align: justify;
+}
+#bodyindex{
+    width: 40%;
+    height: 60%;
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    font-size: 8mm;
+;
+    
+}
+#videoindex{
+    padding: 0.2%;
+    padding-left: 1%;
+    width: 50%;
+    height: 60%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    float: right;
+
+}
+#bodypagamento{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    margin-right: 15%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: right;
+
+
+}
+#fidelidade{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    margin-left: 5%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: left;
+    font-size: 8mm;
+}
+#pagar{
+    padding: 0.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 1%;
+    text-align: justify;
+    background-color:#f0f8ff;
+    width: 30%;
+    float: left;
+
+
+}
+
+footer{
+    margin: 0%;
+    padding: 0;
+    clear: both;
+    position: relative;
+    height: 15%;
+    width: 100%;
+    background-color:#f0f8ff ;
+    color: rgb(82, 78, 78);
+    text-align: center;
+    bottom: 0%;
+}

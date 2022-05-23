@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link href="style4.css" rel="stylesheet">
+        <link rel="icon" href="imgs/logo.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"> 
+        <script src="loja2.js" async></script>
+
+    </head>
+    
+    <div class="container">
+        <!--Adaptar essa barra pro novo sistema-->
+        <nav>        
+            <ul>
+            <li><a href="index.html"> <img src="imgs/logo.png" width="150px" height="150px" title="Doggo Pet Shop" alt=""></a></li>
+            <h1 style="font-size: 10mm;">Doggo Pet Shop</h1>
+            <li><a href="index.html"><h1>Início</h1></a></li>
+            <li><a href="contato.html"><h1>Contato</h1></a></li>
+            <li><a href="sobre.html"><h1>Sobre</h1></a></li>
+            <li><a href="Pagamento.html"><h1>Calculadora de banho</h1></a></li>
+            <li><a href="produtos.html"><h1>Produtos á venda</h1></a></li>
+            <li><a href="Atendimento-domiciliar.html"><h1>Atendimento domiciliar</h1></a></li>
+            <li><a href="sobre-favel.html"><h1>Sobre serviço de transporte</h1></a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="ct" style="font-size: 1.2rem;">
+                <h1>Atendimento domiciliar</h1>
+            </div>
+            <div class="c">
+                <div class="shop-item">
+                        <img class="shop-item-image" src="imgs/53075.png" >
+                        <span class="shop-item-title" style="margin: 0% 0% 40% 0% ;"> serviço de atendimento veterinário (uma consulta com médico veterinário)</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">R$290.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">Adicionar ao carrinho</button>   
+                        </div>
+                </div>
+            </div>
+            <div class="c">
+                <div class="shop-item">
+                        <img class="shop-item-image" src="imgs/53078.png" >
+                        <span class="shop-item-title">serviço de banho e tosa para pets de pequeno e médio porte (até 4 kg)</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">R$80.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">Adicionar ao carrinho</button>   
+                        </div>
+                </div>
+            </div>
+            <div class="c">
+                <div class="shop-item">
+                        <img class="shop-item-image" src="imgs/53078.png" >
+                        <span class="shop-item-title">serviço de banho e tosa para pets de grande porte(mais de 4 kg)</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">R$100.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">Adicionar ao carrinho</button>   
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cart">
+            <h2 class="section-header">Carrinho</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Produto</span>
+                <span class="cart-price cart-header cart-column">Preço</span>
+                <span class="cart-quantity cart-header cart-column">Quantidade</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">R$0</span>
+            </div>
+            <div class="cart-send">
+                <div class="bodycontato">
+                    <h1 style="margin: 10px;">Dados para Contato</h1>
+                    <form id="forme">
+                        <input name="nome" type="text" class="formctrl" value="" placeholder="Seu Nome" id="nome"  > 
+                        <br>
+                        <input name="telefone" type="number" class="formctrl" value="" placeholder="Seu Telefone" id="telefone"  > 
+                        <br>
+                        <input name="rua" type="text" class="formctrl" value="" placeholder="Seu Endereço" id="rua"   > 
+                        <br> 
+                        <input name="numero" type="number" class="formctrl" value="" placeholder="Número da casa" id="numero"  >
+                        <br> 
+                        <input name="bairro" type="address" class="formctrl" value="" placeholder="Seu Bairro" id="bairro"  > 
+                        <br> 
+                        <input name="complemento" type="address" class="formctrl" value="" placeholder="Complemento" id="complemento"  > 
+
+                    </form>
+                
+                </div>
+                <div class="Zona-entrega">
+                    <h1>Local para entrega:</h1>
+                    <input type="radio" id="poazs" name="Regiao" value="1" >
+                    <label for="pozs">  Zona Sul - R$22.00</label>
+                    <br>
+                    <input type="radio" id="poazn" name="Regiao" value="2">
+                    <label for="poazn">Zona Norte - R$12.00</label>
+                    <br>
+                    <input type="radio" id="poazc" name="Regiao" value="3">
+                    <label for="poazc">Zona Central - R$5.00</label>
+                    <br>
+                    <input type="radio" id="poazl" name="Regiao" value="4">
+                    <label for="poazl">Zona Leste - R$16.00</label>
+
+                </div>
+                <button class="btn btn-primary btn-purchase " style="margin-bottom: 1%;" type="button">Enviar pedido</button>
+                    
+            </div>
+        </div>         
+
+        <footer>       
+            <br>
+
+            <p>Doggo Pet Shop - CNPJ 12.123.123/1234-12 - Endereço: Rua Dr. Campos Velho, 1600 - Cristal - Porto Alegre - RS - CEP: 12345-123</p>
+    </footer>
+    </div>
+</html> 
+
+<!--function purchaseClicked() {
+    
+    alert('Thank you for your purchase')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
+}-->

@@ -1,0 +1,109 @@
+<html lang="pt-br">
+    <head> 
+        <meta charset="utf-8">
+        <title>Pagamento|Doggo Pet Shop</title>
+        <link rel="stylesheet" type="text/css" href="style_pgt.css">
+        
+
+    </head>
+    <body>
+        
+        <ul>
+            <li><a href="index.html"> <img src="imgs/logo.png" width="150px" height="150px"></a></li>
+            <h1 style="font-size: 10mm;">Doggo Pet Shop</h1>
+            <li><a href="index.html"><h1>Início</h1></a></li>
+            <li><a href="contato.html"><h1>Contato</h1></a></li>
+            <li><a href="sobre.html"><h1>Sobre</h1></a></li>
+            <li><a href="Pagamento.html"><h1>Calculadora de banho</h1></a></li>
+            <li><a href="produtos.html"><h1>Produtos á venda</h1></a></li>
+            <li><a href="Atendimento-domiciliar.html"><h1>Atendimento domiciliar</h1></a></li>
+        </ul>
+        <div id="bodypagamento">
+            <form>
+
+                <!--Porte-->
+                <h1>Porte do Animal</h1>
+                <input type="radio" id="pequeno" name="porte" value="1">
+                <label for="pequeno">Pequeno - R$30,00</label><br>
+                <input type="radio" id="medio" name="porte" value="2">
+                <label for="medio">Médio - R$40,00</label><br>
+                <input type="radio" id="grande" name="porte" value="3">
+                <label for="grande">Grande - R$50,00</label><br>
+
+                <!--extras-->
+                <h1>Serviços Extras</h1>
+                <input type="checkbox" id="unhas" name="extra1" value="1">
+                <label for="extra1">Corte de Unhas - R$5,00</label><br>
+                <input type="checkbox" id="tosah" name="extra2" value="2">
+                <label for="extra2">Tosa Higiênica - R$10,00</label><br>
+                <input type="checkbox" id="xampue" name="extra3" value="3">
+                <label for="extra3">Xampu Especial - R$15,00</label><br>
+
+                <!--Forma de Pagamento-->
+
+                <h2>Forma de Pagamento</h2>
+                <input type="radio" id="parc" name="formapgto" value="1">
+                <label for="parc">Parcelado</label><br>
+                <input type="radio" id="vista" name="formapgto" value="1">
+                <label for="vista">Á vista</label><br>
+                <!--Fidelidade-->
+                <h2>Programa de Fidelidade</h2>
+                <input type="radio" id="banho1" name="fidelidade" value="1">
+                <label for="banho1">2 Banhos neste mês - desconto de 5% no total</label><br>
+                <input type="radio" id="banho2" name="fidelidade" value="1">
+                <label for="banho2">3 Banhos neste mês - desconto de 10% no total</label><br>
+                <input type="radio" id="banho3" name="fidelidade" value="1">
+                <label for="banho3">4 Banhos neste mês - desconto de 15% no total</label><br>
+                <input type="radio" id="banho4" name="fidelidade" value="1">
+                <label for="banho4">Acima de 4 Banhos neste mês - desconto de 20% no total</label><br>
+
+
+                <br>
+                <br>
+                <input type="submit" value="Enviar" id="enviar">
+                
+                
+                <!--<input type="submit" value="Apagar" id="reset"> -->
+
+                
+            
+
+            
+    
+            </form>
+        </div>
+        <!-- caixa fidelidade-->
+        <div id="fidelidade">
+            <h2>Programa de Fidelidade</h2>
+            <p>A empresa também apresenta um plano fidelidade, o cliente que utiliza o serviço mais
+                de uma vez ao mês possui descontos progressivos se pagar tudo de uma única vez. Os
+                descontos ofertados são: <br>
+                2 Banhos no mês - desconto de 5% no total<br>
+                3 Banhos no mês - desconto de 10% no total<br>
+                4 Banhos no mês - desconto de 15% no total<br>
+                Acima de 4 Banhos no mês - desconto de 20% no total</p>
+
+                
+    
+        </div>
+        <!-- caixa Total-->
+        <!--<div id="pagar">
+            <h2>Total</h2>
+            
+            
+
+        </div>-->
+
+        <script src="pagamento.js"></script>
+        
+    </body>
+
+    <footer>
+         <br>
+        <br>
+        <br>
+        <p>Doggo Pet Shop - CNPJ 12.123.123/1234-12 - Endereço: Rua Dr. Campos Velho, 1600 - Cristal - Porto Alegre - RS - CEP: 12345-123</p>
+
+    </footer>
+
+</html>

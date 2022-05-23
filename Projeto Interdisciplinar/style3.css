@@ -1,0 +1,376 @@
+
+
+
+/* 
+                                Link enunciado: https://moodle.restinga.ifrs.edu.br/pluginfile.php/17250/mod_resource/content/5/Enunciado%20do%20projeto%20v2%20ok.pdf
+Fazer:
+
+talvez:
+
+    atualizar o site antigo pra essa novo sistema de grid
+
+tarefa 1 - link de entrega: https://moodle.restinga.ifrs.edu.br/mod/assign/view.php?id=7357
+    Falta:
+        -conseguir definir tamanho exato dos quadrados
+        -"aplicar" o estilo do site
+        -adicionar os produtos e um sistema/página de "carrinho" com quantidades 
+            -mostrar o preço total (produto*quantidade + entrega = p * q + e = y
+            -inserir dados para entrega (rua, número, complemento e bairro), nome, telefone e Zona em que mora (cada zona tem uma taxa de entrega diferente)
+                -deve ter validação de campos com um alert(complemento é opcional)
+                -usar nested if/else se necessário
+            -no final deve ter um botão de conclusão que exibe um alert com a mensagem:Seu pedido foi enviado com sucesso; entraremos em contato em breve. Agradecemos a preferência.             
+        -fazer o relatório - link de entrega: https://moodle.restinga.ifrs.edu.br/mod/assign/view.php?id=8481
+
+*/
+
+
+
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+
+
+  }
+html{
+    height: 100%;
+    background-image: url(imgs/background.png);
+}
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    display: grid;
+
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    grid-template-columns:  1fr ;
+    grid-template-rows:  0.5 1fr 0.2 0.3 ;
+    grid-template-areas:
+      "nav "
+      "main "
+      "cart"
+      "footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+
+    color: #000000;
+    text-align: center;
+    
+
+  }
+  /*adaptar essa barra pro novo modelo*/
+  nav {
+    text-align: justify;
+    background-color:#f0f8ff ;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    
+  }
+  
+  ul{
+    background-color:#f0f8ff ;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif
+    }
+    
+    ul li{
+        float: left;
+        
+    
+    }
+        
+    ul li a{
+        display: block;
+        text-decoration: none;
+        color: rgb(56, 48, 23);
+        padding: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  
+  .main {
+
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    width: 100%;
+    background-color: #ffffff;
+
+
+    font-size: 10px;
+    margin: 0% 0% 0% 0%;
+    font-weight: 800;
+    min-height: 100vh;  
+    min-width: 0vw;
+    word-wrap: break-word;
+ 
+  }
+
+.cartpage{
+    margin: 20px 50px 20px 50px;
+
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cartinfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #ffffff;
+    background: #645d5d;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding:5px;
+}
+td a{
+    text-decoration: none;
+    color: #636363;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px ;
+}
+
+.totalprice{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.totalprice table{
+    border-top: 3px solid #000000;
+    width: 100%;
+    max-width: 680px;
+}
+td:last-child{
+
+    text-align: right;
+
+} 
+th:last-child{
+    text-align: right;
+}
+.cartinfo p{
+    display: none;
+}
+
+.cart{
+    font-size: 1rem;
+    color: #f0f8ff;
+    margin-top: 2vh;
+    background-color: rgb(80, 80, 80);
+    text-decoration: none;
+}
+
+  footer {
+    background: #d3d3d3;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+
+  }
+  
+.btn{
+    display:inline-block;
+    background: #d3d3d3;
+    color: #000000;
+    padding: 8px 30px;
+    margin: 30px 0px 0px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.btnc{
+    display:inline-block;
+    background: #d3d3d3;
+    color: #000000;
+    padding: 8px 30px;
+    margin: 10px 0px 0px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.btn-danger{
+    color: #000000;
+}
+
+
+
+  @media only screen and (max-width: 1600px)  {
+    html{
+        height: 100%;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows:  auto ;
+      grid-template-areas:
+        "nav "
+        "main "
+        "footer";
+    }
+    .main {
+    
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+        grid-gap: 0.8rem;
+        font-weight: 800;
+        height: 100%;
+
+        
+    }
+    .c {
+        background-color:#f0f8ff ;
+        text-align: justify;
+
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        min-width: 10vw;
+        min-height: 40vh;
+
+
+    
+        
+      }
+    
+  }
+  @media only screen and (max-width: 1300px)  {
+    html{
+        height: 100%;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows:  auto ;
+      grid-template-areas:
+        "nav "
+        "main "
+        "footer";
+    }
+    .main {
+    
+        grid-template-columns:  1fr 1fr 1fr ;
+        grid-template-rows: auto;
+
+        grid-gap: 0.8rem;
+        font-weight: 800;
+        height: 100%;
+
+        
+    }
+    .c {
+        background-color:#f0f8ff ;
+        text-align: justify;
+
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        min-width: 10vw;
+        min-height: 40vh;
+
+
+    
+        
+      }
+    
+  }
+  @media only screen and (max-width: 1000px)  {
+    html{
+        height: 100%;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows:  auto ;
+      grid-template-areas:
+        "nav "
+        "main "
+        "footer";
+    }
+    .main {
+    
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: auto;
+
+        grid-gap: 0.8rem;
+        font-weight: 800;
+        height: 100%;
+
+        
+    }
+    .c {
+        background-color:#f0f8ff ;
+        text-align: justify;
+
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        min-width: 10vw;
+        min-height: 40vh;
+
+
+    
+        
+      }
+    
+  }
+  @media only screen and (max-width: 500px)  {
+    html{
+        height: 100%;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows:  auto ;
+      grid-template-areas:
+        "nav "
+        "main "
+        "footer";
+    }
+    .main {
+    
+        grid-template-columns:  1fr ;
+        grid-template-rows: auto;
+
+        grid-gap: 0.8rem;
+        font-weight: 800;
+        height: 100%;
+
+        
+    }
+    .c {
+        background-color:#f0f8ff ;
+        text-align: justify;
+
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        min-width: 65vw;
+        min-height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+
+
+      }
+      footer {
+        background: #d3d3d3;
+        grid-area: footer;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        margin-top: 5vh;
+        
+      }
+  }
+      
+
+  
+  
